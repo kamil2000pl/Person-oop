@@ -1,5 +1,7 @@
 package oop;
 
+import java.util.ArrayList;
+
 /**
  * Person App
  * Simple class to model a Person
@@ -44,8 +46,24 @@ public class App
         System.out.println("person2 age: " + person2.getAge());
 
         System.out.println("");
-        System.out.println("Display person1 using toString() : " + person2.toString() );
-        System.out.println("Display person1 using toString() : " + person2 );   // will call toString() on object
+        System.out.println("Display person1 using toString() : " + person2.toString());
+        System.out.println("Display person1 using toString() : " + person2);   // will call toString() on object
+
+
+        System.out.println();
+        person2.print();
+
+        ArrayList<Person> people = new ArrayList<>();
+
+        people.add(person1);
+        people.add(person2);
+
+        System.out.println();
+        for (Person p : people)
+        {
+            p.print();
+            System.out.println();
+        }
 
         //TODO
         // Implement a toString( ) method in the Person class, and run this App again
